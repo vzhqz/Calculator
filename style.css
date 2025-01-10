@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
+
+/* CALCULATOR DEVELOPED BY DIAA */
+/* CALCULATOR DEVELOPED BY DIAA */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "M PLUS 2", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.header {
+    margin-bottom: 50px;
+    font-size: 3em;
+    position: relative;
+    width: max-content;
+    cursor: default;
+    transition: .25s;
+}
+
+.header::after {
+    content: '';
+    background-image: linear-gradient(to right, #de521a, #f79014);
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header:hover::after {
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+}
+
+.calculator {
+    background-color: rgb(60, 60, 95);   
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.671);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.display {
+    border: none;
+    outline: none;
+    font-size: 1.8em;
+    text-align: right;
+    padding: 15px 10px;
+    color: black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: default;
+    font-weight: bold;
+}
+
+.display::placeholder {
+    color: black;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+}
+
+.buttons button {
+    font-size: 1.4em;
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.operators {
+    background-color: rgb(236, 134, 0);
+}
+.operators:hover {
+    background-color: rgb(204, 116, 0);
+}
+
+.calcOperators {
+    background-color: rgb(236, 51, 0);
+    color: white;
+}
+.calcOperators:hover {
+    background-color: rgb(204, 44, 0);
+}
+
+.equals {
+    grid-column: span 2;
+    height: 100%;
+    background-color: rgb(36, 171, 36);
+}
+.equals:hover {
+    background-color: rgb(31, 147, 31);
+}
+
+.numbers {
+    background-color: rgb(242, 242, 242);
+}
+.numbers:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.secretBtn {
+    padding: 1em 3em;
+    font-size: 2em;
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    transition: .25s;
+}
+
+.secretBtn::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -1;
+}
+
+.secretBtn:hover {
+    z-index: 0;
+    box-shadow: 40px 0 100px #008cff80, -40px 0 100px #e100ff80
+}
